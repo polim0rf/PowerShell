@@ -2,14 +2,17 @@
 
 SYNOPSIS
   Get the information extracted from CISCO ISE CSV exports.
-
+  https://www.cisco.com/c/en/us/products/security/identity-services-engine/index.html
+  
 
 DESCRIPTION
 
  This script queries the ISE CSV file using MS Access driver, in order to query information "Database-style"
  instead of going through each line through PS. The scripts needs both drivers below to run properly, as well as
  running in Powershell x86:
+ 
  http://www.microsoft.com/download/en/details.aspx?id=13255
+ 
  http://www.microsoft.com/download/en/confirmation.aspx?id=23734
 
  This script reads a file called "ISE.csv" located at "C:\ISEreader". Change the name and path as needed.
