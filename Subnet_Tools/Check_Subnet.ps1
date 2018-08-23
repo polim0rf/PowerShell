@@ -13,6 +13,7 @@
 .NOTES
   Version:        1.0.2
   Creation Date:  09.04.2018
+  Author:         polim0rf
   Purpose/Change: Initial script development
 
 .EXAMPLES
