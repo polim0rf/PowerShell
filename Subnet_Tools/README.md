@@ -13,7 +13,7 @@
 
   ##### NOTES
   * Version:        1.0.2
-  * Author:         Nicolas Fernandez Osinaga
+  * Author:         polim0rf
   * Creation Date:  09.04.2018
   * Purpose/Change: Initial script development
 
@@ -34,6 +34,7 @@
 
   ##### NOTES
   * Version:        1.0.2
+  * Author:         polim0rf
   * Creation Date:  09.04.2018
   * Purpose/Change: Initial script development
 
