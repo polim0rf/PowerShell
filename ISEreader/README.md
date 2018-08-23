@@ -30,7 +30,7 @@
 
 ### PARAMETERS 
 
-    - -username
+    -username
     -computername
     -macaddress
     -hostname (TBD)   
@@ -50,6 +50,6 @@
  * ISEreader -ipaddress 10.10.10.10
  * ISEreader -username john.doe
 
-   To be researched:
- * ISEreader -hostname <hostname>
+   TBD:
+ * ISEreader -hostname < hostname >
 
