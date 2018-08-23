@@ -22,15 +22,15 @@
 
 ### ROADMAP
 
- [ ] For some reason queries by hostname are not properly resolved. To be worked on.
- [ ] Need to continue testing in case there are duplicate entries.
- [ ] Usernames can be in different columns than the "Username" column in ISE exports. An enhancement could be to query 
+ - [ ] For some reason queries by hostname are not properly resolved. To be worked on.
+ - [ ] Need to continue testing in case there are duplicate entries.
+ - [ ] Usernames can be in different columns than the "Username" column in ISE exports. An enhancement could be to query 
  other columns as well. To be tested.
 
 
 ### PARAMETERS 
 
-    -username
+    - -username
     -computername
     -macaddress
     -hostname (TBD)   
@@ -38,18 +38,18 @@
 
 ### NOTES
 
-  Version:        1.1.0
-  Author:         polim0rf
-  Creation Date:  26.06.2018
-  Purpose/Change: Initial script development
+  - Version:        1.1.0
+  - Author:         polim0rf
+  - Creation Date:  26.06.2018
+  - Purpose/Change: Initial script development
 
 
 ### EXAMPLES
 
-  ISEreader -macaddress 00-1E-65-02-A5-74
-  ISEreader -ipaddress 10.10.10.10
-  ISEreader -username john.doe
+ * ISEreader -macaddress 00-1E-65-02-A5-74
+ * ISEreader -ipaddress 10.10.10.10
+ * ISEreader -username john.doe
 
-  To be researched:
-  ISEreader -hostname <hostname>
+   To be researched:
+ * ISEreader -hostname <hostname>
 
