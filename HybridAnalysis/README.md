@@ -16,7 +16,7 @@
 ### ROADMAP
 
  - [ ] Improve Error handling
- - [ ] Improve Reports query capabilities
+ - [ ] Improve Reports query capabilities. Currently downloaded as Misp XML report. To be added as optional parameter.
  - [ ] Improve hash input detection
  - [ ] Add functionalities to query API (such as URL query)
 
