@@ -116,7 +116,7 @@ Function HA {
             $Export | Export-Csv -NoTypeInformation -Path $($outputFolder + "HA_" + $hash + ".csv") -Encoding UTF8 -Delimiter ";"
 
             ### Download report from HA. Only with Admin priv. (Test undergoing)
-            $object[0].sha256 | DownloadReport
+            $object[0].job_id | DownloadReport
             
         }
     }
@@ -278,10 +278,19 @@ Function Hash_Validator {
 }
 
 Filter DownloadReport {
-    $_
+    
+    write-Host "`r"
+    Write-Host -Fore Cyan "Downloading report from HA for job_id: $_"
+
+    $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+    $headers.Add("user-agent", 'Falcon')
+    $headers.Add("api-key", $API)
+    $headers.Add("accept",'application/json')
+
     try {
-        Invoke-RestMethod -Method Get -Uri "https://www.hybrid-analysis.com/api/v2/report/$_/file/pdf" -H $Headers -ErrorAction Stop
-        #$Report
+        $Report = Invoke-RestMethod -Method Get -Uri "https://www.hybrid-analysis.com/api/v2/report/$_/file/misp" -Headers $headers
+        $out = WriteXmlToScreen $Report
+        $out | Out-file ./report.txt
     }
     catch {
         #Error handling
@@ -292,6 +301,18 @@ Filter DownloadReport {
     }
 
 }
+
+function WriteXmlToScreen ([xml]$xml)
+{
+    $StringWriter = New-Object System.IO.StringWriter;
+    $XmlWriter = New-Object System.Xml.XmlTextWriter $StringWriter;
+    $XmlWriter.Formatting = "indented";
+    $xml.WriteTo($XmlWriter);
+    $XmlWriter.Flush();
+    $StringWriter.Flush();
+    Write-Output $StringWriter.ToString();
+}
+
 
 Filter DroppedFiles {
 
