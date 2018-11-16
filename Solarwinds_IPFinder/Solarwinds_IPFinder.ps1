@@ -8,7 +8,7 @@
  It is necessary to run the script with Admin credentials and to have the SWISS Powershell module 
  installed. (Check SolarWinds API documentation)
 
- This script will gather all data from a solarwinds database called 'IPMan', given an IP from a list.
+ This script will gather all data from a solarwinds database called 'IPAM', given an IP from a list.
 
 .NOTES
   Version:        1.1.0
@@ -31,7 +31,7 @@ Write-Output "`r";
 $IPlist = get-content .\IP.txt
 Import-Module 'C:\Program Files (x86)\WindowsPowerShell\Modules\SwisPowerShell\2.3.0.108\SwisPowerShell'
 $swis = Connect-Swis -Hostname <servername>
-$sql_query = 'SELECT IPAddress,IpNodeId,DnsBackward,IPAddressN,MAC,SubnetId,DisplayName FROM IPMan.IPNode Where IPAddress=@IPAddress'
+$sql_query = 'SELECT IPAddress,IpNodeId,DnsBackward,IPAddressN,MAC,SubnetId,DisplayName FROM IPAM.IPNode Where IPAddress=@IPAddress'
 
 ### NEXT LINES SHOULD NOT BE MODIFIED
 $IPlist | foreach {
@@ -41,13 +41,13 @@ $IPlist | foreach {
         Write-host "Found $IP in SolarWinds!" -ForegroundColor Magenta
         Write-host "$results"
         Write-Output "`r";
-        $results | Export-Csv .\Netmonfinder-Output.csv -Append -Force
+        $results | Export-Csv .\Solarwinds_IPfinder-Output.csv -Append -Force
     }
     else {
         [string]$notfound = "$IP, not found in SolarWinds"
         Write-host "$IP, not found in SolarWinds..." -ForegroundColor Red
         Write-Output "`r";
-        $notfound | Out-file .\Not_found_SolarWinds.csv -Append
+        $notfound | Out-file .\Not_found_SolarWinds_IPfinder.csv -Append
     }
     $results = ""
 
