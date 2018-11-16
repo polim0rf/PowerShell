@@ -32,7 +32,7 @@
 ### NOTES
 
   - Version:        1.1.0
-  - Author:        Nicolas Fernandez Osinaga
+  - Author:         polim0rf
   - Creation Date:  19.07.2018
   - Purpose/Change: Initial script development
 
