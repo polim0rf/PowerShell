@@ -38,8 +38,8 @@
   - Purpose/Change: Initial script development
 
   Thanks to these two blogs for understanding of psobjects handling:
-  https://www.gngrninja.com/script-ninja/2016/6/18/powershell-getting-started-part-12-creating-custom-objects#add
-  https://learn-powershell.net/2014/01/24/avoiding-system-object-or-similar-output-when-using-export-csv/
+  - https://www.gngrninja.com/script-ninja/2016/6/18/powershell-getting-started-part-12-creating-custom-objects#add
+  - https://learn-powershell.net/2014/01/24/avoiding-system-object-or-similar-output-when-using-export-csv/
 
 
 ### EXAMPLES
