@@ -9,6 +9,8 @@
 ### DESCRIPTION
 
  This script retrieves category information for a list of URLs, and submit to Sitereview the ones that are still Unrated.
+ 
+ Results saved into ./Output/ folder.
 
 
 ### PARAMETERS 
