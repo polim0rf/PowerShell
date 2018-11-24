@@ -85,10 +85,7 @@ Function URLcategory {
         Categorize
     }
     Else {
-
         [array]$list = Get-content $list
-        
-        $count = 0
         $list | ForEach-Object {
             $url = $_
             Categorize
