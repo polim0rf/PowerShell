@@ -29,7 +29,10 @@
   DISCLAIMER: Please be aware that querying SiteReview.com via scripts 
   is against their ToS. This script POC is only for educational purposes.
 
+### ROADMAP
 
+ -[] Add Fortinet site categorization support.
+ 
 ### EXAMPLES
 
    - Query single URL:
