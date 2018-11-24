@@ -31,7 +31,7 @@
 
 ### ROADMAP
 
- -[] Add Fortinet site categorization support.
+ - [ ] Add Fortinet site categorization support.
  
 ### EXAMPLES
 
