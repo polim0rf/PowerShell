@@ -96,7 +96,6 @@ filter Categorize {
     Write-Host "`r"
 
     $po = Invoke-RestMethod -Method 'POST' -uri "http://sitereview.bluecoat.com/resource/lookup" -H $Headers -Body $json -SessionVariable myWebSession
-    $po
 
     If ($po.unrated -eq 'True') {
  
