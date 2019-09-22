@@ -15,11 +15,14 @@
     -Mail Item folder hierarchy
  
  This script is aiming to help incident responders to retrieve a long list of emails for finding randomized URLs, attachments, etc...
+ 
+ It's advised to run this tool with MS Outlook agent initiated, to avoid process creation delays and errors.
 
 
 ### ROADMAP
 
  - [ ] Improve Error handling
+ - [ ] Improve script to run without MS Outlook agent running
 
 
 ### PARAMETERS 
