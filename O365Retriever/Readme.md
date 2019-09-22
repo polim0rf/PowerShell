@@ -30,7 +30,7 @@
 ### NOTES
 
   - Version:        2.1
-  - Author:         Nicolas Fernandez Osinaga
+  - Author:         polim0rf
   - Creation Date:  20.09.2019
   - Purpose/Change: Initial script development
 
